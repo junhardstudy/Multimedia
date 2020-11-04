@@ -154,3 +154,22 @@ IDCT의 경우, 아래와 같은 수식에 의해 구할 수 있습니다.
 ![IDCT equation](./image/idct_equation.png)
 
 ## 결과 이미지
+
+1. 2by2
+
+![result](./image/2by2.jpg)
+
+2. 4by4
+
+![result](./image/4by4.jpg)
+
+3. 8by8
+
+![result](./image/8by8.jpg)
+
+-> 이미지 블록 크기가 작아질수록, 생략하는 고주파 성분이 많아지게 됩니다. 따라서 compression정도가 증가하므로 이미지의 품질이 좋지
+못함을 알 수 있습니다.
+
+4. DCT basis function value
+
+![result](./image/result_command.JPG)
