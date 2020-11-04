@@ -39,6 +39,7 @@ DCT는 원래의 signal값을 DC성분과 AC성분으로 분리하며, IDCT는 �
 각각의 DCT basis function의 값을 계산하는 코드는 아래와 같은 수식에 대응됩니다.
 
 ![equation](https://latex.codecogs.com/png.latex?\frac{C(u)C(v)))}{4}\sum_{j=0}^{7}\sum_{i&space;=&space;0}^{7}cos\frac{(2i&plus;1)\cdot&space;u\pi}{16}&space;\cdot&space;cos\frac{(2j&plus;1)\cdot&space;v\pi}{16})
+
 <br>
 <br>
 <br>
