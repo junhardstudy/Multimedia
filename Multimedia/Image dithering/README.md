@@ -18,7 +18,7 @@ Example) 2bits 색상 값(0, 1, 2, 3)을 가질 수 있는 경우 아래와 같�
 
 <table>
 <tr>
-<td>a</td>
+<td bgcolor="black">a</td>
 <td>b</td>
 </tr>
 <tr>
