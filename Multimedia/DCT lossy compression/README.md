@@ -38,7 +38,7 @@ DCT는 원래의 signal값을 DC성분과 AC성분으로 분리하며, IDCT는 �
 
 각각의 DCT basis function의 값을 계산하는 코드는 아래와 같은 수식에 대응됩니다.
 
-![equation](https://latex.codecogs.com/png.latex?\frac{C(u)C(v)))}{4}\sum_{j=0}^{7}\sum_{i&space;=&space;0}^{7}cos\frac{(2i&plus;1)\cdot&space;u\pi}{16}&space;\cdot&space;cos\frac{(2j&plus;1)\cdot&space;v\pi}{16})
+![equation](./image/basis_function.png)
 
 <br>
 <br>
@@ -90,8 +90,15 @@ DCT는 원래의 signal값을 DC성분과 AC성분으로 분리하며, IDCT는 �
 ```
 원본 이미지에 대해 계산한 DCT basis값을 적용하는 부분입니다.
 
-우선 원본 이미지의 8 by 8 block부분만 가져오게 됩니다.(f(i, j))
+우선 원본 이미지의 8 by 8 block부분만 가져옵니다. 이 행렬값들을 위에서 계산한 DCT basis function이 가지는 값 matrix와
+내적을 하게 됩니다. 즉 아래와 같은 수식을 수행하게 됩니다.
 
+![fullDCTequation](!./image/fullequation.png)
+
+이렇게 DCT가 적용이 되면, Lenna 이미지에서 어느 한 블록에 인접한 픽셀들끼리는 low frequency에 몰려있기 때문에 적은 수의 high frequency
+성분들을 제거하여 이미지의 용량을 줄일 수 있습니다.
+
+마지막으로 8by8, 4by4, 2by2의 block 크기로 IDCT를 적용해 원본 이미지를 구합니다. 
 
 
 ```cpp
@@ -108,6 +115,16 @@ void showDCT(float** basis, int num) {
 	printf("\n\n");
 }
 ```
+DCT basis function 값에 대해 block[0][0]에서 부터 block[0][7]까지의 성분값을 표시하는 함수 입니다.
+위 수식에서 u값이 0으로 고정된 상수이므로 v로만 이루어진 1dimensional basis function으로 생각할 수 있습니다.
+
+이러한 DCT basis function에 대한 값들을 아래와 같은 그래프로 확인할 수 있습니다.
+그래프들은 matlab으로 구현하였습니다.
+
+```matlab
+
+```
+
 
 
 ```cpp
@@ -122,7 +139,6 @@ char IDCT(Mat DCTed, int i, int j, int mode, float** basis) {
 			else Cu = 1;
 			if (v == 0)Cv = 1 / sqrt(2.0);
 			else Cv = 1;
-			//result += basis[u][v] * DCTed.at<double>(u, v);
 			result += ((Cu * Cv) / 4.0) * cos(((2 * i + 1) * u * pi) / 16.0) * cos(((2 * j + 1) * v * pi) / 16.0) * DCTed.at<double>(u, v);
 		}
 	}
@@ -131,5 +147,10 @@ char IDCT(Mat DCTed, int i, int j, int mode, float** basis) {
 	return (char)result;
 }
 ```
+Inverse DCT를 계산하는 함수입니다.
+
+IDCT의 경우, 아래와 같은 수식에 의해 구할 수 있습니다.
+
+![IDCT equation](./image/idct_equation.png)
 
 ## 결과 이미지
