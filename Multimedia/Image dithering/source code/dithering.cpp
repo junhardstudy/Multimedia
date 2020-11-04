@@ -18,7 +18,7 @@ int main() {
 
 	cvtColor(img, gray_img, COLOR_BGR2GRAY);
 	cvtColor(img, after_img, COLOR_BGR2GRAY);
-	imwrite("gray image.jpg", gray_img);
+	imwrite("gray_image.jpg", gray_img);
 
 	/************************************************************************
 		gray image에 대해 error diffusion dithering algorithm을 적용합니다.

@@ -122,7 +122,7 @@ gray image와 마찬가지로 모든 행과 열에 대해 오차 확산을 적�
 
 * gray 이미지
 
-![gray image.jpg](./image/gray\ image.jpg)
+![gray image.jpg](./image/gray_image.jpg)
 
 * error diffusion dithering이 적용된 gray 이미지
 
