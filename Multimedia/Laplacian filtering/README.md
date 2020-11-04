@@ -24,7 +24,7 @@
 
 이미지의 각 픽셀 값을 주변의 인접한 픽셀(neighbor pixel)값과 필터 h에 대해 convolution 연산을 수행하는 방법입니다.
 
-convolution : ![convolution equation](https://latex.codecogs.com/png.latex?\inline&space;q*h&space;=&space;\sum_{i&space;=&space;-\frac{m}{2}}^{\frac{m}{2}}\sum_{j&space;=&space;-\frac{m}{2}}^{\frac{m}{2}}h(j,&space;i)q(x&space;-&space;j,&space;y&space;-i&space;))
+![convolution equation](https://latex.codecogs.com/png.latex?convolution&space;:&space;q*h&space;=&space;\sum_{i&space;=&space;-\frac{m}{2}}^{\frac{m}{2}}\sum_{j&space;=&space;-\frac{m}{2}}^{\frac{m}{2}}h(j,&space;i)q(x&space;-&space;j,&space;y&space;-i&space;))
 
 	
 
