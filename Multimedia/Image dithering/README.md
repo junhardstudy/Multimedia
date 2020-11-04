@@ -26,6 +26,7 @@ Example) 2bits 색상 값(0, 1, 2, 3)을 가질 수 있는 경우 아래와 같�
 <td>d</td>
 </tr>
 </table>
+
 ## Error diffusion dithering
 
 dithering시 발생하는 픽셀 값에 대한 quantization error를 줄이는 방법입니다.
