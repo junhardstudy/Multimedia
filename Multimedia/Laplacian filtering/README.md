@@ -22,7 +22,9 @@
 
 * Area operation
 
-이미지의 각 픽셀 값을 주변의 인접한 픽셀(neighbor pixel)값과 특정한 연산을 취하는 방법입니다.
+이미지의 각 픽셀 값을 주변의 인접한 픽셀(neighbor pixel)값과 필터 h에 대해 convolution 연산을 수행하는 방법입니다.
+
+convolution : ![convolution equation](<img src="https://latex.codecogs.com/png.latex?q*h&space;=&space;\sum_{i&space;=&space;-\frac{m}{2}}^{\frac{m}{2}}\sum_{j&space;=&space;-\frac{m}{2}}^{\frac{m}{2}}h(j,&space;i)q(x&space;-&space;j,&space;y&space;-i&space;)" title="q*h = \sum_{i = -\frac{m}{2}}^{\frac{m}{2}}\sum_{j = -\frac{m}{2}}^{\frac{m}{2}}h(j, i)q(x - j, y -i )" />)
 
 	
 
