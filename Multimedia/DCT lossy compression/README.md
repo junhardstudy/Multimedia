@@ -93,7 +93,7 @@ DCT는 원래의 signal값을 DC성분과 AC성분으로 분리하며, IDCT는 �
 우선 원본 이미지의 8 by 8 block부분만 가져옵니다. 이 행렬값들을 위에서 계산한 DCT basis function이 가지는 값 matrix와
 내적을 하게 됩니다. 즉 아래와 같은 수식을 수행하게 됩니다.
 
-![fullDCTequation](!./image/fullequation.png)
+![fullDCTequation](./image/fullequation.png)
 
 이렇게 DCT가 적용이 되면, Lenna 이미지에서 어느 한 블록에 인접한 픽셀들끼리는 low frequency에 몰려있기 때문에 적은 수의 high frequency
 성분들을 제거하여 이미지의 용량을 줄일 수 있습니다.
