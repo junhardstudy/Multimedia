@@ -16,7 +16,7 @@ original media의 모든 색상이 사용이 불가능합니다.
 
 Example) 2bits 색상 값(0, 1, 2, 3)을 가질 수 있는 경우 아래와 같은 dithering matrix를 이용하여 표현 할 수 있습니다.
 
-$`a^2+b^2=c^2`$
+(https://latex.codecogs.com/png.latex?\inline&space;\begin{bmatrix}&space;0&space;&&space;2\\&space;3&space;&&space;1&space;\end{bmatrix})
 
 ## Error diffusion dithering
 
