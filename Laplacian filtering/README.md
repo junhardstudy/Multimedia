@@ -48,7 +48,7 @@ Gaussian blur는 Gaussian distribution을 따르는 kernel을 만들고 원본�
 위에서 구현한 기존 filtering에서는 모든 kernel이 동일한 값을 가지지만, Gaussian distribution에서는 중심 픽셀의 가중치가 높고 
 주위의 인접 픽셀들의 가중치는 낮게 잡습니다.
 
-2차원 가우시안 분포 수식
+![gaussian distribution](./image/gaussian_distribution_eq.png)
 2차원 가우시안 분포 그래프
 
 그 다음으로, Gaussian blur가 적용된 이미지들에 대해 Laplacian filtering를 적용하게 됩니다.
@@ -56,6 +56,13 @@ Gaussian blur는 Gaussian distribution을 따르는 kernel을 만들고 원본�
 Laplacian filtering에서는 이러한 픽셀들의 경계를 2차 미분항들로 구합니다.
 
 라플라시안 수식
+![Laplacian_eq](./image/Laplacian_eq.png)
+
+![lapl_eq1](./image/lapl_eq1.png)
+![lapl_eq2](./image/lapl_eq2.png)
+
+![lapl_eq3](./image/lapl_eq3.png)
+![lapl_eq4](./image/lapl_eq4.png)
 
 zero crossing을 찾는 FindZeroCrossings()정의 함수는 과제에서 제공받은 함수입니다.
 
@@ -73,11 +80,17 @@ FindZeroCrossings()가 적용된 이미지에서 경계선에 선을 그리기�
 
 Lenna 이미지에 적용
 
+1. Gaussian blur 적용
+
 ![GaussianBlur](./image/Gaussian_result_4.jpg)
 
 ![GaussianBlur](./image/Gaussian_result_5.jpg)
 
+2. Laplacian filter 적용
+
 ![laplacian_img](./image/Laplacian_result_1.jpg)
+
+3. Zero crossing 적용
 
 ![zero](./image/Zero_crossing_1.jpg)
 
@@ -85,7 +98,11 @@ Lenna 이미지에 적용
 
 도로 이미지에 적용
 
+1. Laplacian filter 적용
+
 ![GaussianBlur](./image/Road_lapl5.jpg)
+
+2. Zero crossing과 호프 변환 적용
 
 ![GaussianBlur](./image/Road5.jpg)
 
