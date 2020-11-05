@@ -56,12 +56,22 @@ Gaussian blur는 Gaussian distribution을 따르는 kernel을 만들고 원본�
 Laplacian filtering에서는 이러한 픽셀들의 경계를 2차 미분항들로 구합니다.
 
 라플라시안 수식
+
 ![Laplacian_eq](./image/Laplacian_eq.png)
 
+index i는 y방향, 이미지에서는 열(column)에 대응되고
+
+index j는 x방향, 이미지에서는 행(row)에 대응됩니다.
+
 ![lapl_eq1](./image/lapl_eq1.png)
+
 ![lapl_eq2](./image/lapl_eq2.png)
 
+
+픽셀의 중심을 i, j로 하기 위해 i = i - 1, j = j - 1로 치환하면
+
 ![lapl_eq3](./image/lapl_eq3.png)
+
 ![lapl_eq4](./image/lapl_eq4.png)
 
 zero crossing을 찾는 FindZeroCrossings()정의 함수는 과제에서 제공받은 함수입니다.
