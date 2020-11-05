@@ -1,9 +1,9 @@
 # DCT Lossy Compression
 
-원본 이미지에 대해서 특정 block에 대해 frequency domain으로 옮기게 되면, 각 픽셀의 얼마나 값이 변하는가에 대한 정보를 알 수 있습니다.
+원본 이미지에 대해서 특정 image block을 frequency domain으로 옮기게 되면, 각 픽셀이 얼마나 값이 변하는가에 대한 정보를 알 수 있습니다.
 
 이 때, low frequency쪽으로 많은 수의 signal 성분이 분포하게 됩니다. 
-이는 특정 블록에 대해 인접한 픽셀들간에는 픽셀값이 비슷한 성분이 많음을 의미합니다. 따라서 사람의 시각에서 미세한 이미지의 변화인 높은 주파수 보다, 다수를 차지하고 있는
+이는 특정 블록에 대해 인접한 픽셀들간에는 픽셀값이 비슷한 성분이 많음을 의미합니다. 따라서 사람의 시각에서는 미세한 이미지의 변화인 높은 주파수 보다, 다수를 차지하고 있는
 낮은 주파수 성분과 DC성분에 좀 더 민감하므로 이를 이용하여 높은 주파수의 성분은 제거 하고 낮은 주파수의 성분만을 이용하는 것이 DCT lossy compression 입니다.
 
 lossy compression이므로, 원본 이미지와 완전히 동일한 data를 가지고 있지는 않지만 원본 이미지에 거의 상응하는 수준의 data를 가지고 있습니다.
@@ -119,12 +119,10 @@ DCT basis function 값에 대해 block[0][0]에서 부터 block[0][7]까지의 �
 위 수식에서 u값이 0으로 고정된 상수이므로 v로만 이루어진 1dimensional basis function으로 생각할 수 있습니다.
 
 이러한 DCT basis function에 대한 값들을 아래와 같은 그래프로 확인할 수 있습니다.
-그래프들은 matlab으로 구현하였습니다.
 
-```matlab
+![dct graph](https://unix4lyfe.org/dct-1d/basis.png)
 
-```
-
+![출처](https://unix4lyfe.org/dct-1d)
 
 
 ```cpp
