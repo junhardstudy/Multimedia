@@ -49,13 +49,15 @@ Gaussian blur는 Gaussian distribution을 따르는 kernel을 만들고 원본�
 주위의 인접 픽셀들의 가중치는 낮게 잡습니다.
 
 ![gaussian distribution](./image/gaussian_distribution_eq.png)
-2차원 가우시안 분포 그래프
+
+![graph](https://www.researchgate.net/profile/Dinesh_Sathyamoorthy/publication/26487220/figure/fig1/AS:669004553265155@1536514523437/2D-Gaussian-distribution-with-mean-0-0-and-s-1-Source-http-wwwceehwacuk.png)
+
+[출처](https://www.researchgate.net/figure/2D-Gaussian-distribution-with-mean-0-0-and-s-1-Source-http-wwwceehwacuk_fig1_26487220)
 
 그 다음으로, Gaussian blur가 적용된 이미지들에 대해 Laplacian filtering를 적용하게 됩니다.
 사람의 얼굴이나 도로의 선과 같이 경계선을 찾기위해서는 이미지의 픽셀값이 갑자기 변하는 부분을 찾아야 합니다.
 Laplacian filtering에서는 이러한 픽셀들의 경계를 2차 미분항들로 구합니다.
 
-라플라시안 수식
 
 ![Laplacian_eq](./image/Laplacian_eq.png)
 
