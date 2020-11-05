@@ -81,11 +81,16 @@ index j는 x방향, 이미지에서는 행(row)에 대응됩니다.
 ![kernel](./image/laplkernel.png)
 
 zero crossing을 찾는 FindZeroCrossings()정의 함수는 과제에서 제공받은 함수입니다.
+<br>
+<br>
+<br>
 
 ```cpp
 *output_pixel = (difference > laplacian_threshold) ? 255 : 0;
 ```
 내부적으로는 임계값(threshold)을 비교하여 edge를 정의합니다.
+<br>
+<br>
 
 ```cpp
 HoughLinesP(abs_road, lines, 1, CV_PI / 180, threshold);
