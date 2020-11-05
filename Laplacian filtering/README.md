@@ -52,7 +52,7 @@ Gaussian blur는 Gaussian distribution을 따르는 kernel을 만들고 원본�
 
 ![graph](https://www.researchgate.net/profile/Dinesh_Sathyamoorthy/publication/26487220/figure/fig1/AS:669004553265155@1536514523437/2D-Gaussian-distribution-with-mean-0-0-and-s-1-Source-http-wwwceehwacuk.png)
 
-[출처](https://www.researchgate.net/figure/2D-Gaussian-distribution-with-mean-0-0-and-s-1-Source-http-wwwceehwacuk_fig1_26487220)
+[이미지 출처](https://www.researchgate.net/figure/2D-Gaussian-distribution-with-mean-0-0-and-s-1-Source-http-wwwceehwacuk_fig1_26487220)
 
 그 다음으로, Gaussian blur가 적용된 이미지들에 대해 Laplacian filtering를 적용하게 됩니다.
 사람의 얼굴이나 도로의 선과 같이 경계선을 찾기위해서는 이미지의 픽셀값이 갑자기 변하는 부분을 찾아야 합니다.
@@ -75,6 +75,10 @@ index j는 x방향, 이미지에서는 행(row)에 대응됩니다.
 ![lapl_eq3](./image/lapl_eq3.png)
 
 ![lapl_eq4](./image/lapl_eq4.png)
+
+이러한 결과를 2 dimensional에 대해 kernel로 나타내면 아래와 같습니다.
+
+![kernel](./image/laplkernel.png)
 
 zero crossing을 찾는 FindZeroCrossings()정의 함수는 과제에서 제공받은 함수입니다.
 
