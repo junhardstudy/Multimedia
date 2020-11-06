@@ -151,6 +151,11 @@ IDCT의 경우, 아래와 같은 수식에 의해 구할 수 있습니다.
 
 ![IDCT equation](./image/idct_equation.png)
 
+시그마의 index값에 따라 왜곡정도가 다릅니다.
+이를 mode라는 변수를 통해 구현되며, 2, 4, 8은 각각 2by2, 4by4, 8by8만큼 이미지의 signal 성분을 가져옵니다.
+
+따라서 8 -> 4 -> 2로 갈수록 DCT basis block에서 drop하는 이미지 signal 성분이 많아지므로, 결과 이미지처럼 점점 원본 이미지에서 왜곡됩니다.
+
 ## 결과 이미지
 
 1. 2by2
